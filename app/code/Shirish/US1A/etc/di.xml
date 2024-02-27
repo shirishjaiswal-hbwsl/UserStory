@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+   <preference 
+        for="\Magento\Catalog\Api\Data\CategoryInterface" 
+        type="Shirish\US1A\ViewModel\IModOne"/>
+   <preference 
+        for="Shirish\US1A\ViewModel\IModOne" 
+        type="Shirish\US1A\ViewModel\ModOne"/>
+    <!-- <preference 
+        for="Psr\Log\LoggerInterface" 
+        type="Shirish\US1A\Logger\CustomLogger"/> -->
+        <type name="Shirish\US1A\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Shirish\US1A\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">myLoggerName</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Shirish\US1A\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
+
+
+        <!-- <?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="YourNamespace\YourModule\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="YourNamespace\YourModule\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">myLoggerName</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">YourNamespace\YourModule\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+</config> -->

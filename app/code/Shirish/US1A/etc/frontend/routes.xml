@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+  <router id="standard">
+    <route id="user_story_1a" frontName="Shirish_US1A">
+      <module name="Shirish_US1A" />
+    </route>
+  </router>
+</config>
