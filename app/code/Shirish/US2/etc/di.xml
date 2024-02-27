@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+  <type name="Magento\Catalog\Model\Product">
+    <plugin 
+      name="product_price" 
+      type="Shirish\US2\Plugin\ProductPricePlugin"
+      />
+  </type>
+
+  <type name="Magento\Theme\Block\Html\Header">
+    <plugin 
+      name="product_header_welcome" 
+      type="Shirish\US2\Plugin\ProductWelcomePlugin"
+      />
+  </type>
+  <type name="Magento\Theme\Block\Html\Footer">
+    <plugin name="product_footer_copyright" 
+      type="Shirish\US2\Plugin\ProductCopyrightPlugin"
+     />
+  </type>
+  <type name="Magento\Theme\Block\Html\Breadcrumbs">
+    <plugin name="product_breadcrumb" 
+      type="Shirish\US2\Plugin\BreadcrumbPlugin"
+      />
+  </type>
+</config>
