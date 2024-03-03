@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page layout="3column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <container name="product.info.message" htmlTag="div"
+                htmlClass="product-info-message" before="product.info.price">
+                <block
+                    class="Shirish\US7\Block\Message"
+                    name="message" template="Shirish_US7::messageTemplate.phtml"
+                />
+            </container>
+        </referenceContainer>
+        <!-- <referenceContainer name="columns">
+            <container name="div.sidebar.main" htmlTag="div" htmlClass="sidebar sidebar-main"
+                before="-">
+                <container name="sidebar.additional" htmlTag="div"
+                    htmlClass="sidebar sidebar-additional" before="-" />
+            </container>
+        </referenceContainer> -->
+
+    </body>
+</page>
