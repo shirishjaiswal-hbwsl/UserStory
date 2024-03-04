@@ -1,0 +1,33 @@
+<table>
+    <tr>
+        <th><?= __('Employee ID'); ?></th>
+        <th><?= __('First Name'); ?></th>
+        <th><?= __('Last Name'); ?></th>
+        <th><?= __('Email Id'); ?></th>
+        <th><?= __('Address'); ?></th>
+        <th><?= __('Phone'); ?></th>
+        <th colspan="2"><?= __('Action'); ?></th>
+    </tr>
+    <?php
+    $collectionData = $block->showData();
+    foreach ($collectionData as $collection) {
+        echo "<tr>"; // Open a new table row for each record
+        if ($collection) {
+            echo "<td>" . $collection->getEmployeeId() . "</td>";
+            echo "<td>" . $collection->getFirstName() . "</td>";
+            echo "<td>" . $collection->getLastName() . "</td>";
+            echo "<td>" . $collection->getEmailId() . "</td>";
+            echo "<td>" . $collection->getAddress() . "</td>";
+            echo "<td>" . $collection->getPhone() . "</td>";
+            echo "<td>";
+            echo "<a href='" . $block->getUrl('use_path/index/edit') . "?id=" . $collection->getId() . "' class='action primary'>Edit</a>";
+            echo "</td>";
+            echo "<td>";
+            echo "<a href='" . $block->getUrl('use_path/index/delete') . "?id=" . $collection->getId() . "' class='action primary'>Delete</a>";
+            echo "</td>";
+        }
+        echo "</tr>"; // Close the table row
+    }
+    ?>
+</table>
+<a href="<?= $block->getUrl('use_path/index/registrationForm') ?>" class="action primary">Add Data</a>
