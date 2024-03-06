@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="user_story19" frontName="user_story19">
+            <module name="Shantanoo_UserStory19" />
+        </route>
+    </router>
+</config>
