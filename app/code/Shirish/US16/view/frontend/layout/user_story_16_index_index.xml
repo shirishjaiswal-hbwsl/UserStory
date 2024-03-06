@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+    <referenceContainer name="content">
+      <block 
+        class="Shirish\US16\Block\Frontend" 
+        name="user_story_16_template" 
+        template="Shirish_US16::template.phtml"
+      /> 
+      <block 
+        class="Shirish\US16\Block\ColorPicker" 
+        name="user_story_16_color_picker" 
+        template="Shirish_US16::template.phtml"
+      /> 
+    </referenceContainer>
+  </body>
+</page>

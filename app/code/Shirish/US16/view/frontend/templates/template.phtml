@@ -1,0 +1,14 @@
+
+<?php
+$enableTextField = $block->getEnable();
+$enableColorPicker = $block->getEnableColorPicker();
+$textToDisplay = $block->getTextToDisplay();
+$colorPick = $block->getPickColor();
+if ($enableColorPicker == true): ?>
+<body style="background-color: <?= $colorPick?>;">
+
+</body>
+<?php endif;?>
+<?php if($enableTextField == true): ?>
+    <h3><?=$textToDisplay?></h3>
+<?php endif; ?>
